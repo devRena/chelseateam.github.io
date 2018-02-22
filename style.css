@@ -1,0 +1,62 @@
+body{
+	padding:20px 120px 120px 80px;
+}
+ul{
+	list-style-type: none;
+	
+}
+.rightline{border-right: 2px solid #000;
+     padding-right: 0px;
+}
+hr{
+	
+	/*color:#000;*/
+	margin-bottom:0px;
+	border:1px solid #000;
+}
+.listplayer{
+	margin-left:0px;
+}
+.listplayer ul{
+	padding:0px;
+}
+.listplayer ul li{
+	border-bottom: 2px solid #000;
+	cursor:pointer;
+}
+.listplayer h3{ padding-left:30px}
+.delbutton{
+	background-color:#888888;
+	padding:8px 18px 8px 18px;
+	color:white;
+	border-radius: 50%;
+	box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+	text-align:right;
+}
+.favorbutton{
+	
+	text-align:left;
+	background-color:#ffffff;
+	border-bottom: 1px solid #888888;
+}
+
+.buttonpad{
+	margin-top:20px;
+}
+.detailpadd{
+	padding: 20px 0 0 20px;
+}
+.myli{
+	padding-left:0px;
+	 height: 0.5px;
+}
+.hrfavor{
+	border-color:rgba(0, 0, 0, .5);
+	border:none;
+}
+.active{
+	background-image: url("arrow-right.png");
+	background-repeat: no-repeat;
+	background-size: 80px 30px;
+    background-position: right;
+}

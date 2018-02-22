@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+  <title>Chelsea Football Team</title>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+   <script src="mainController.js"></script>
+ </head>
+ <body  ng-app="myApp" ng-controller="MainController">
+ <h1>Squad</h1>
+ <hr>
+ <div class="row">
+	<div class="col-md-5 rightline">
+	 <div class="listplayer">
+	 <ul>
+		<li ng-repeat="player in players | orderBy : 'strSigning'" ng-class="{'active': player.idPlayer == playerid}" ng-click="paikths(player)">
+			<h3>{{player.strPlayer}}</h3>
+		</li>
+	 </ul>
+	 </div>
+	</div>
+	<div class="col-md-7">
+	<div class="col-md-4 detailpadd">
+	<img src="http://{{player.strThumb}}" width="200px" height="200px">
+	</div>
+	<div class="col-md-7 detailpadd">
+	<h3>{{player.strPlayer}}</h3>
+	<h4>{{age}} years old</h4>
+	<p>{{player.strDescriptionEN}}</p>
+	</div>
+	<div class="col-md-1 detailpadd">
+	 <span style="cursor:pointer;padding-top:10px" ng-click="add(player)">
+          <i style="color:{{mycolor}}" class="{{asterisk}}"></i>
+        </span>
+	</div>
+	</div>
+</div>
+<h1>Favorites</h1>
+<hr>
+<div class="row">
+<div class="col-md-12">
+	<ul class="myli">
+		<li ng-repeat="player in playersfavor| filter:{intLoved:'1'}">
+		<div class="col-md-12 favorbutton">
+		<div class="col-md-11">
+			<h3>{{player.strPlayer}}</h3>
+		</div>
+		<div class="col-md-1 buttonpad">
+			<span style="cursor:pointer" class="delbutton" ng-click="remove(player)">X</span>
+		</div>
+		</div>
+		<hr class="hrfavor">
+		</li>
+	 </ul>
+</div>
+</div>
+ </body>
+</html>
