@@ -10,7 +10,7 @@ app.controller('MainController', function($scope,$http) {
 	}
 	$http({
           method: 'GET',
-          url: 'https://www.thesportsdb.com/api/v1/json/1/searchplayers.php?t=Chelsea'
+          url: 'http://www.thesportsdb.com/api/v1/json/1/searchplayers.php?t=Chelsea'
         }).then(function successCallback(response) {
 			$scope.players = response.data.player;
 			$scope.playersfavor = response.data.player;
